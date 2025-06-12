@@ -64,6 +64,56 @@ The BBM92 protocol uses entangled photon pairs for secure key exchange. It is an
 
 ---
 
+
+## 📦 Code Structure
+
+This repository implements a simulation of the **BBM92 quantum key distribution protocol** using Qiskit. The code is organized into two main Python classes:
+
+### 1. `BBM92Protocol`
+
+This is the core class that simulates the BBM92 QKD protocol over a free-space quantum channel. It includes:
+
+- **Initialization** with parameters such as number of qubits, noise configuration, and simulation time.
+    
+- **Entanglement generation** via Bell pairs using Hadamard and CNOT gates.
+    
+- **Eavesdropper simulation** that optionally intercepts and resends qubits.
+    
+- **Noise modeling** using Qiskit Aer’s depolarizing error model.
+    
+- **Basis reconciliation** to filter matching measurement bases between Alice and Bob.
+    
+- **Key metrics computation** including Bit Error Rate (BER), total QBER, Shannon entropy, throughput, and Secret Key Rate (SKR).
+    
+- **Atmospheric loss modeling** using geometric divergence and the Beer–Lambert law.
+    
+- **Signal-to-Noise Ratio (SNR)** estimation based on final key and noise levels.
+    
+- **`run_protocol()`**: The main simulation function that runs all steps and returns protocol metrics.
+    
+
+### 2. `BBM92ProtocolWithPlots` (inherits from `BBM92Protocol`)
+
+An extension of the core class that adds visualization features:
+
+- **`plot_skr_vs_distance()`**: Simulates the protocol over varying distances and plots the secret key rate (SKR) vs. distance.
+    
+- **`plot_qber_vs_distance()`**: Plots the total QBER vs. distance, helping analyze protocol reliability at different communication ranges.
+    
+
+### 3. Main Script Execution
+
+At the bottom of the script:
+
+- An instance of `BBM92Protocol` is created.
+    
+- The protocol is executed with options to include noise or an eavesdropper.
+    
+- Results such as key length, SKR, QBER, throughput, and SNR are printed.
+    
+---
+
+
 ## 📈 Sample Output
 
 ```

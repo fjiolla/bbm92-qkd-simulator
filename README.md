@@ -29,11 +29,11 @@ This project implements the BBM92 quantum key distribution (QKD) protocol using 
 
 ### 🔷 QBER vs Distance (No Eve, No Noise)
 
-<img src="graph1.png" alt="QBER vs Distance" width="500">
+<img src="https://github.com/fjiolla/bbm92-qkd-simulator/blob/main/diagrams/Graph1.png" alt="QBER vs Distance" width="500">
 
 ### 🔷 Secret Key Rate vs Distance
 
-<img src="graph2.png" alt="SKR vs Distance" width="500">
+<img src="https://github.com/fjiolla/bbm92-qkd-simulator/blob/main/diagrams/graph2.png" alt="SKR vs Distance" width="500">
 
 ---
 

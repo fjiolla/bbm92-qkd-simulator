@@ -97,4 +97,4 @@ This simulator was developed as part of a research paper on **Quantum Satellite-
 
 ## 🛡️ License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](https://github.com/fjiolla/bbm92-qkd-simulator/blob/main/LICENSE).
